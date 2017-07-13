@@ -1,0 +1,531 @@
+#this is dm2person investing on dm1
+
+sub dm2person (int duration)
+begin
+	loop int end_time = clock.time()  + duration
+   until clock.time() >= end_time
+	begin
+		double b = random();
+		if (b>  0.0) && (b<=0.149) then 
+			selling.set_caption("$0");selling.redraw(); personsent.set_event_code("person sent $0");
+			Sentperson.present(); box10(8000); end;
+		if (b>0.149) && (b<=0.190) then 
+			selling.set_caption("$1");selling.redraw(); personsent.set_event_code("person sent $1");
+			Sentperson.present(); box13(8000); end;
+		if (b>0.190) && (b<=0.352) then 
+			selling.set_caption("$2");selling.redraw(); personsent.set_event_code("person sent $2");
+			Sentperson.present(); box16(8000); end;
+		if (b>0.352) && (b<=0.447) then 
+			selling.set_caption("$3");selling.redraw(); personsent.set_event_code("person sent $3");
+			Sentperson.present(); box19(8000); end;
+		if (b>0.447) && (b<=0.555) then 
+			selling.set_caption("$4");selling.redraw(); personsent.set_event_code("person sent $4");
+			Sentperson.present(); box22(8000); end;
+		if (b>0.555) && (b<=0.636) then 
+			selling.set_caption("$5");selling.redraw(); personsent.set_event_code("person sent $5");
+			Sentperson.present(); box25(8000); end;
+		if (b>0.636) && (b<=0.690) then 
+			selling.set_caption("$6");selling.redraw(); personsent.set_event_code("person sent $6");
+			Sentperson.present(); box28(8000); end;
+		if (b>0.690) && (b<=0.731) then 
+			selling.set_caption("$7");selling.redraw(); personsent.set_event_code("person sent $7");
+			Sentperson.present(); box31(8000); end;
+		if (b>0.731) && (b<=0.799) then 
+			selling.set_caption("$8");selling.redraw(); personsent.set_event_code("person sent $8");
+			Sentperson.present(); box34(8000); end;
+		if (b>0.799) && (b<=0.840) then 
+			selling.set_caption("$9");selling.redraw(); personsent.set_event_code("person sent $9");
+			Sentperson.present(); box37(8000); end;
+		if (b>0.840) && (b<=0.999) then 
+			selling.set_caption("$10");selling.redraw(); personsent.set_event_code("person sent $10");
+			Sentperson.present(); box40(8000); end;
+	end;
+end;
+
+#this is dm2comp investing on dm1
+
+sub dm2comp (int durations)
+begin int b = random(0,10);
+	loop int end_time = clock.time()  + durations
+   until clock.time() >= end_time
+	begin
+		if (b==0) then 
+			selling.set_caption("$0"); selling.redraw(); computersent.set_event_code("computer sent $0");
+			Sentcomp.present(); box10(8000); end;
+		if (b==1) then 
+			selling.set_caption("$1"); selling.redraw(); computersent.set_event_code("computer sent $1");
+			Sentcomp.present(); box13(8000); end;
+		if (b==2) then 
+			selling.set_caption("$2"); selling.redraw(); computersent.set_event_code("computer sent $2");
+			Sentcomp.present(); box16(8000); end;
+		if (b==3) then 
+			selling.set_caption("$3"); selling.redraw(); computersent.set_event_code("computer sent $3");
+			Sentcomp.present(); box19(8000); end;
+		if (b==4) then 
+			selling.set_caption("$4"); selling.redraw(); computersent.set_event_code("computer sent $4");
+			Sentcomp.present(); box22(8000); end;
+		if (b==5) then 
+			selling.set_caption("$5"); selling.redraw(); computersent.set_event_code("computer sent $5");
+			Sentcomp.present(); box25(8000); end;
+		if (b==6) then 
+			selling.set_caption("$6"); selling.redraw(); computersent.set_event_code("computer sent $6");
+			Sentcomp.present(); box28(8000); end;
+		if (b==7) then 
+			selling.set_caption("$7"); selling.redraw(); computersent.set_event_code("computer sent $7");
+			Sentcomp.present(); box31(8000); end;
+		if (b==8) then 
+			selling.set_caption("$8"); selling.redraw(); computersent.set_event_code("computer sent $8");
+			Sentcomp.present(); box34(8000); end;
+		if (b==9) then 
+			selling.set_caption("$9"); selling.redraw(); computersent.set_event_code("computer sent $9");
+			Sentcomp.present(); box37(8000); end;
+		if (b==10) then 
+			selling.set_caption("$10"); selling.redraw(); computersent.set_event_code("computer sent $10");
+			Sentcomp.present(); box40(8000); end;
+	end;
+end;
+
+#this is dm2person returning to dm1
+
+sub ret10 
+	begin double b = random(); 
+		if (b> 0.0) && (b<=0.82) then coding10.set_event_code("person returned $0"); end;
+		if (b> 0.82) && (b<=0.91) then coding10.set_event_code("person returned $1"); end;
+		if (b> 0.91) && (b<=1.0) then coding10.set_event_code("person returned $9"); end;
+	end;
+sub ret13 
+	begin double b = random();
+		if (b> 0.0) && (b<=0.67) then coding10.set_event_code("person returned $0"); end;
+		if (b> 0.67) && (b<=1.0) then coding10.set_event_code("person returned $1"); end;
+	end;
+sub ret16 
+	begin double b = random();
+		if (b> 0.0) && (b<=0.25) then coding10.set_event_code("person returned $0"); end;
+		if (b> 0.25) && (b<=0.42) then coding10.set_event_code("person returned $1"); end;
+		if (b> 0.42) && (b<=0.67) then coding10.set_event_code("person returned $2"); end;
+		if (b> 0.67) && (b<=0.84) then coding10.set_event_code("person returned $3"); end;
+		if (b> 0.84) && (b<=1.0) then coding10.set_event_code("person returned $4"); end;
+	end;
+sub ret19 
+	begin double b = random();
+		if (b> 0.0) && (b<=0.143) then coding10.set_event_code("person returned $0"); end;
+		if (b> 0.143) && (b<=0.286) then coding10.set_event_code("person returned $1"); end;
+		if (b> 0.286) && (b<=0.572) then coding10.set_event_code("person returned $4"); end;
+		if (b> 0.572) && (b<=1.0) then coding10.set_event_code("person returned $6"); end;
+	end;
+sub ret22 
+	begin double b = random();
+		if (b> 0.0) && (b<=0.125) then coding10.set_event_code("person returned $0"); end;
+		if (b> 0.125) && (b<=0.25) then coding10.set_event_code("person returned $1"); end;
+		if (b> 0.25) && (b<=0.625) then coding10.set_event_code("person returned $2"); end;
+		if (b> 0.625) && (b<=0.75) then coding10.set_event_code("person returned $4"); end;
+		if (b> 0.75) && (b<=0.875) then coding10.set_event_code("person returned $5"); end;
+		if (b> 0.875) && (b<=1.0) then coding10.set_event_code("person returned $7"); end;
+	end;
+sub ret25 
+	begin double b = random();
+		if (b> 0.0) && (b<=0.167) then coding10.set_event_code("person returned $0"); end;
+		if (b> 0.167) && (b<=0.334) then coding10.set_event_code("person returned $1"); end;
+		if (b> 0.334) && (b<=0.501) then coding10.set_event_code("person returned $7"); end;
+		if (b> 0.501) && (b<=0.834) then coding10.set_event_code("person returned $10"); end;
+		if (b> 0.834) && (b<=1.0) then coding10.set_event_code("person returned $12"); end;
+	end;
+sub ret28 
+	begin double b = random();
+		if (b> 0.0) && (b<=0.25) then coding10.set_event_code("person returned $7"); end;
+		if (b> 0.25) && (b<=0.5) then coding10.set_event_code("person returned $8"); end;
+		if (b> 0.5) && (b<=0.75) then coding10.set_event_code("person returned $10"); end;
+		if (b> 0.75) && (b<=1.0) then coding10.set_event_code("person returned $12"); end;
+	end;
+sub ret31 
+	begin double b = random();
+		if (b> 0.0) && (b<=0.333) then coding10.set_event_code("person returned $7"); end;
+		if (b> 0.333) && (b<=0.666) then coding10.set_event_code("person returned $10"); end;
+		if (b> 0.666) && (b<=1.0) then coding10.set_event_code("person returned $14"); end;
+	end;
+sub ret34 
+	begin double b = random();
+		if (b> 0.0) && (b<=0.2167) then coding10.set_event_code("person returned $0"); end;
+		if (b> 0.167) && (b<=0.334) then coding10.set_event_code("person returned $1"); end;
+		if (b> 0.334) && (b<=0.501) then coding10.set_event_code("person returned $7"); end;
+		if (b> 0.501) && (b<=0.834) then coding10.set_event_code("person returned $10"); end;
+		if (b> 0.834) && (b<=1.0) then coding10.set_event_code("person returned $12"); end;
+	end;
+sub ret37 
+	begin double b = random();
+		if (b> 0.0) && (b<=0.333) then coding10.set_event_code("person returned $1"); end;
+		if (b> 0.333) && (b<=0.666) then coding10.set_event_code("person returned $5"); end;
+		if (b> 0.666) && (b<=1.0) then coding10.set_event_code("person returned $9"); end;
+	end;
+sub ret40 
+	begin double b = random();
+		if (b> 0.0) && (b<=0.167) then coding10.set_event_code("person returned $0"); end;
+		if (b> 0.167) && (b<=0.25) then coding10.set_event_code("person returned $2"); end;
+		if (b> 0.25) && (b<=0.333) then coding10.set_event_code("person returned $10"); end;
+		if (b> 0.333) && (b<=0.5) then coding10.set_event_code("person returned $15"); end;
+		if (b> 0.5) && (b<=0.917) then coding10.set_event_code("person returned $20"); end;
+		if (b> 0.917) && (b<=1.0) then coding10.set_event_code("person returned $21"); end;
+	end;
+
+sub decisionperson (int perdur)
+begin 
+	loop int end_time = clock.time()  + perdur
+   until clock.time() >= end_time
+			begin
+	array <int> seq10[10] = {-220, -176, -132, -88, -44, 0, 44, 88, 132, 176};
+	array <string> num[10] = {"$1","$2","$3","$4","$5","$6","$7","$8","$9","$10"};
+	array <string> mun[10] = {"$9","$8","$7","$6","$5","$4","$3","$2","$1","$0"};
+	stick.poll();
+	cursor10.set_part_x( 1, stick.x() ); 
+	cursor10.set_part_y( 1, stick.y() );
+		if (stick.y()==-264) then zero.set_color(0,0,0); 
+			dollar_2.set_caption("_"); dollar_2.redraw(); 
+			dollar_3.set_caption("_"); dollar_3.redraw();
+			coding10.set_event_code("_"); 
+		end;
+		if (stick.y()>-264) 
+		then zero.set_color(0,255,0); 
+			dollar_2.set_caption("$0"); dollar_2.redraw(); 
+			dollar_3.set_caption("$10"); dollar_3.redraw();
+			ret10(); 
+		elseif (stick.y()<-264) then zero.set_color(0,0,0); 
+		end;
+		if (stick.y()>seq10[1]) 
+		then red10_10_1.set_color(255,0,0); 
+			dollar_2.set_caption("$1"); dollar_2.redraw(); 
+			dollar_3.set_caption("$9"); dollar_3.redraw();
+			ret13(); 
+		elseif (stick.y()<seq10[1]) then red10_10_1.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[2]) 
+		then red10_10_2.set_color(255,0,0); 
+			dollar_2.set_caption("$2"); dollar_2.redraw(); 
+			dollar_3.set_caption("$8"); dollar_3.redraw();
+			ret16(); 
+		elseif (stick.y()<seq10[2]) then red10_10_2.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[3])  
+		then red10_10_3.set_color(255,0,0); 
+			dollar_2.set_caption("$3"); dollar_2.redraw(); 
+			dollar_3.set_caption("$7"); dollar_3.redraw();
+			ret19(); 
+		elseif (stick.y()<seq10[3]) then red10_10_3.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[4])  
+		then red10_10_4.set_color(255,0,0); 
+			dollar_2.set_caption("$4"); dollar_2.redraw(); 
+			dollar_3.set_caption("$6"); dollar_3.redraw();
+			ret22(); 
+		elseif (stick.y()<seq10[4]) then red10_10_4.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[5])  
+		then red10_10_5.set_color(255,0,0); 
+			dollar_2.set_caption("$5"); dollar_2.redraw(); 
+			dollar_3.set_caption("$5"); dollar_3.redraw();
+			ret25(); 
+		elseif (stick.y()<seq10[5]) then red10_10_5.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[6])  
+		then red10_10_6.set_color(255,0,0); 
+			dollar_2.set_caption("$6"); dollar_2.redraw(); 
+			dollar_3.set_caption("$4"); dollar_3.redraw();
+			ret28(); 
+		elseif (stick.y()<seq10[6]) then red10_10_6.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[7])  
+		then red10_10_7.set_color(255,0,0); 
+			dollar_2.set_caption("$7"); dollar_2.redraw(); 
+			dollar_3.set_caption("$3"); dollar_3.redraw();
+			ret31(); 
+		elseif (stick.y()<seq10[7]) then red10_10_7.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[8])  
+		then red10_10_8.set_color(255,0,0); 
+			dollar_2.set_caption("$8"); dollar_2.redraw(); 
+			dollar_3.set_caption("$2"); dollar_3.redraw();
+			ret34(); 
+		elseif (stick.y()<seq10[8]) then red10_10_8.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[9])  
+		then red10_10_9.set_color(255,0,0); 
+			dollar_2.set_caption("$9"); dollar_2.redraw(); 
+			dollar_3.set_caption("$1"); dollar_3.redraw();
+			ret37(); 
+		elseif (stick.y()<seq10[9]) then red10_10_9.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[10])  
+		then red10_10_10.set_color(255,0,0); 
+			dollar_2.set_caption("$10"); dollar_2.redraw(); 
+			dollar_3.set_caption("$0"); dollar_3.redraw();
+			ret40(); 
+		elseif (stick.y()<seq10[10]) then red10_10_10.set_color(0,0,0);
+		end;
+		dollar_10.set_caption("$10"); dollar_10.redraw();
+		codes10.present();
+	end;
+end;
+
+#this is dm2comp returning to dm1
+
+sub retcomp10 
+	begin int b = random(0,10); 
+	array <string> compu[11] = {"computer returned $0","computer returned $1","computer returned $2","computer returned $3",
+										 "computer returned $4","computer returned $5","computer returned $6","computer returned $7",
+										 "computer returned $8","computer returned $9","computer returned $10"};
+	loop int i=0; int t = i+1 until i>10 begin
+	if b == i then coding10.set_event_code(compu[t]); end;
+	end;
+end;
+
+sub retcomp13 
+	begin int b = random(0,13); 
+	array <string> compu[14] = {"computer returned $0","computer returned $1","computer returned $2","computer returned $3",
+										 "computer returned $4","computer returned $5","computer returned $6","computer returned $7",
+										 "computer returned $8","computer returned $9","computer returned $10",
+										 "computer returned $11","computer returned $12","computer returned $13"};
+	loop int i=0; int t= i+1 until i>13 begin
+	if b == i then coding10.set_event_code(compu[t]); end;
+	end;
+end;
+
+sub retcomp16 
+	begin int b = random(0,16); 
+	array <string> compu[17] = {"computer returned $0","computer returned $1","computer returned $2","computer returned $3",
+										 "computer returned $4","computer returned $5","computer returned $6","computer returned $7",
+										 "computer returned $8","computer returned $9","computer returned $10",
+										 "computer returned $11","computer returned $12","computer returned $13",
+										 "computer returned $14","computer returned $15","computer returned $16"};
+	loop int i=0; int t= i+1 until i>16 begin
+	if b == i then coding10.set_event_code(compu[t]); end;
+	end;
+end;
+
+sub retcomp19 
+	begin int b = random(0,19); 
+	array <string> compu[20] = {"computer returned $0","computer returned $1","computer returned $2","computer returned $3",
+										 "computer returned $4","computer returned $5","computer returned $6","computer returned $7",
+										 "computer returned $8","computer returned $9","computer returned $10",
+										 "computer returned $11","computer returned $12","computer returned $13",
+										 "computer returned $14","computer returned $15","computer returned $16",
+										 "computer returned $17","computer returned $18","computer returned $19"};
+	loop int i=0; int t= i+1 until i>19 begin
+	if b == i then coding10.set_event_code(compu[t]); end;
+	end;
+end;
+
+sub retcomp22 
+	begin int b = random(0,22); 
+	array <string> compu[23] = {"computer returned $0","computer returned $1","computer returned $2","computer returned $3",
+										 "computer returned $4","computer returned $5","computer returned $6","computer returned $7",
+										 "computer returned $8","computer returned $9","computer returned $10",
+										 "computer returned $11","computer returned $12","computer returned $13",
+										 "computer returned $14","computer returned $15","computer returned $16",
+										 "computer returned $17","computer returned $18","computer returned $19",
+										 "computer returned $20","computer returned $21","computer returned $22"};
+	loop int i=0; int t= i+1 until i>22 begin
+	if b == i then coding10.set_event_code(compu[t]); end;
+	end;
+end;
+
+sub retcomp25 
+	begin int b = random(0,25); 
+	array <string> compu[26] = {"computer returned $0","computer returned $1","computer returned $2","computer returned $3",
+										 "computer returned $4","computer returned $5","computer returned $6","computer returned $7",
+										 "computer returned $8","computer returned $9","computer returned $10",
+										 "computer returned $11","computer returned $12","computer returned $13",
+										 "computer returned $14","computer returned $15","computer returned $16",
+										 "computer returned $17","computer returned $18","computer returned $19",
+										 "computer returned $20","computer returned $21","computer returned $22",
+										 "computer returned $23","computer returned $24","computer returned $25"};
+	loop int i=0; int t= i+1 until i>25 begin
+	if b == i then coding10.set_event_code(compu[t]); end;
+	end;
+end;
+
+sub retcomp28 
+	begin int b = random(0,28); 
+	array <string> compu[29] = {"computer returned $0","computer returned $1","computer returned $2","computer returned $3",
+										 "computer returned $4","computer returned $5","computer returned $6","computer returned $7",
+										 "computer returned $8","computer returned $9","computer returned $10",
+										 "computer returned $11","computer returned $12","computer returned $13",
+										 "computer returned $14","computer returned $15","computer returned $16",
+										 "computer returned $17","computer returned $18","computer returned $19",
+										 "computer returned $20","computer returned $21","computer returned $22",
+										 "computer returned $23","computer returned $24","computer returned $25",
+										 "computer returned $26","computer returned $27","computer returned $28"};
+	loop int i=0; int t= i+1 until i>28 begin
+	if b == i then coding10.set_event_code(compu[t]); end;
+	end;
+end;
+
+sub retcomp31 
+	begin int b = random(0,31); 
+	array <string> compu[32] = {"computer returned $0","computer returned $1","computer returned $2","computer returned $3",
+										 "computer returned $4","computer returned $5","computer returned $6","computer returned $7",
+										 "computer returned $8","computer returned $9","computer returned $10",
+										 "computer returned $11","computer returned $12","computer returned $13",
+										 "computer returned $14","computer returned $15","computer returned $16",
+										 "computer returned $17","computer returned $18","computer returned $19",
+										 "computer returned $20","computer returned $21","computer returned $22",
+										 "computer returned $23","computer returned $24","computer returned $25",
+										 "computer returned $26","computer returned $27","computer returned $28",
+										 "computer returned $29","computer returned $30","computer returned $31"};
+	loop int i=0; int t= i+1 until i>31 begin
+	if b == i then coding10.set_event_code(compu[t]); end;
+	end;
+end;
+
+sub retcomp34
+	begin int b = random(0,34); 
+	array <string> compu[35] = {"computer returned $0","computer returned $1","computer returned $2","computer returned $3",
+										 "computer returned $4","computer returned $5","computer returned $6","computer returned $7",
+										 "computer returned $8","computer returned $9","computer returned $10",
+										 "computer returned $11","computer returned $12","computer returned $13",
+										 "computer returned $14","computer returned $15","computer returned $16",
+										 "computer returned $17","computer returned $18","computer returned $19",
+										 "computer returned $20","computer returned $21","computer returned $22",
+										 "computer returned $23","computer returned $24","computer returned $25",
+										 "computer returned $26","computer returned $27","computer returned $28",
+										 "computer returned $29","computer returned $30","computer returned $31",
+										 "computer returned $32","computer returned $33","computer returned $34"};
+	loop int i=0; int t= i+1 until i>34 begin
+	if b == i then coding10.set_event_code(compu[t]); end;
+	end;
+end;
+
+sub retcomp37
+	begin int b = random(0,37); 
+	array <string> compu[38] = {"computer returned $0","computer returned $1","computer returned $2","computer returned $3",
+										 "computer returned $4","computer returned $5","computer returned $6","computer returned $7",
+										 "computer returned $8","computer returned $9","computer returned $10",
+										 "computer returned $11","computer returned $12","computer returned $13",
+										 "computer returned $14","computer returned $15","computer returned $16",
+										 "computer returned $17","computer returned $18","computer returned $19",
+										 "computer returned $20","computer returned $21","computer returned $22",
+										 "computer returned $23","computer returned $24","computer returned $25",
+										 "computer returned $26","computer returned $27","computer returned $28",
+										 "computer returned $29","computer returned $30","computer returned $31",
+										 "computer returned $32","computer returned $33","computer returned $34",
+										 "computer returned $35","computer returned $36","computer returned $37"};
+	loop int i=0; int t= i+1 until i>37 begin
+	if b == i then coding10.set_event_code(compu[t]); end;
+	end;
+end;
+
+sub retcomp40
+	begin int b = random(0,40); 
+	array <string> compu[41] = {"computer returned $0","computer returned $1","computer returned $2","computer returned $3",
+										 "computer returned $4","computer returned $5","computer returned $6","computer returned $7",
+										 "computer returned $8","computer returned $9","computer returned $10",
+										 "computer returned $11","computer returned $12","computer returned $13",
+										 "computer returned $14","computer returned $15","computer returned $16",
+										 "computer returned $17","computer returned $18","computer returned $19",
+										 "computer returned $20","computer returned $21","computer returned $22",
+										 "computer returned $23","computer returned $24","computer returned $25",
+										 "computer returned $26","computer returned $27","computer returned $28",
+										 "computer returned $29","computer returned $30","computer returned $31",
+										 "computer returned $32","computer returned $33","computer returned $34",
+										 "computer returned $35","computer returned $36","computer returned $37",
+										 "computer returned $38","computer returned $39","computer returned $40"};
+	loop int i=0; int t= i+1 until i>40 begin
+	if b == i then coding10.set_event_code(compu[t]); end;
+	end;
+end;
+
+sub decisioncomp (int compdur)
+begin 
+	loop int end_time = clock.time()  + compdur
+   until clock.time() >= end_time
+			begin
+	array <int> seq10[10] = {-220, -176, -132, -88, -44, 0, 44, 88, 132, 176};
+	array <string> num[10] = {"$1","$2","$3","$4","$5","$6","$7","$8","$9","$10"};
+	array <string> mun[10] = {"$9","$8","$7","$6","$5","$4","$3","$2","$1","$0"};
+	stick.poll();
+	cursor10.set_part_x( 1, stick.x() ); 
+	cursor10.set_part_y( 1, stick.y() );
+		if (stick.y()==-264) then zero.set_color(0,0,0); 
+			dollar_2.set_caption("_"); dollar_2.redraw(); 
+			dollar_3.set_caption("_"); dollar_3.redraw();
+			coding10.set_event_code("_"); 
+		end;
+		if (stick.y()>-264) 
+		then zero.set_color(0,255,0); 
+			dollar_2.set_caption("$0"); dollar_2.redraw(); 
+			dollar_3.set_caption("$10"); dollar_3.redraw();
+			retcomp10(); 
+		elseif (stick.y()<-264) then zero.set_color(0,0,0); 
+		end;
+		if (stick.y()>seq10[1]) 
+		then red10_10_1.set_color(255,0,0); 
+			dollar_2.set_caption("$1"); dollar_2.redraw(); 
+			dollar_3.set_caption("$9"); dollar_3.redraw();
+			retcomp13(); 
+		elseif (stick.y()<seq10[1]) then red10_10_1.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[2]) 
+		then red10_10_2.set_color(255,0,0); 
+			dollar_2.set_caption("$2"); dollar_2.redraw(); 
+			dollar_3.set_caption("$8"); dollar_3.redraw();
+			retcomp16(); 
+		elseif (stick.y()<seq10[2]) then red10_10_2.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[3])  
+		then red10_10_3.set_color(255,0,0); 
+			dollar_2.set_caption("$3"); dollar_2.redraw(); 
+			dollar_3.set_caption("$7"); dollar_3.redraw();
+			retcomp19(); 
+		elseif (stick.y()<seq10[3]) then red10_10_3.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[4])  
+		then red10_10_4.set_color(255,0,0); 
+			dollar_2.set_caption("$4"); dollar_2.redraw(); 
+			dollar_3.set_caption("$6"); dollar_3.redraw();
+			retcomp22(); 
+		elseif (stick.y()<seq10[4]) then red10_10_4.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[5])  
+		then red10_10_5.set_color(255,0,0); 
+			dollar_2.set_caption("$5"); dollar_2.redraw(); 
+			dollar_3.set_caption("$5"); dollar_3.redraw();
+			retcomp25(); 
+		elseif (stick.y()<seq10[5]) then red10_10_5.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[6])  
+		then red10_10_6.set_color(255,0,0); 
+			dollar_2.set_caption("$6"); dollar_2.redraw(); 
+			dollar_3.set_caption("$4"); dollar_3.redraw();
+			retcomp28(); 
+		elseif (stick.y()<seq10[6]) then red10_10_6.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[7])  
+		then red10_10_7.set_color(255,0,0); 
+			dollar_2.set_caption("$7"); dollar_2.redraw(); 
+			dollar_3.set_caption("$3"); dollar_3.redraw();
+			retcomp31(); 
+		elseif (stick.y()<seq10[7]) then red10_10_7.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[8])  
+		then red10_10_8.set_color(255,0,0); 
+			dollar_2.set_caption("$8"); dollar_2.redraw(); 
+			dollar_3.set_caption("$2"); dollar_3.redraw();
+			retcomp34(); 
+		elseif (stick.y()<seq10[8]) then red10_10_8.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[9])  
+		then red10_10_9.set_color(255,0,0); 
+			dollar_2.set_caption("$9"); dollar_2.redraw(); 
+			dollar_3.set_caption("$1"); dollar_3.redraw();
+			retcomp37(); 
+		elseif (stick.y()<seq10[9]) then red10_10_9.set_color(0,0,0);
+		end;
+		if (stick.y()>seq10[10])  
+		then red10_10_10.set_color(255,0,0); 
+			dollar_2.set_caption("$10"); dollar_2.redraw(); 
+			dollar_3.set_caption("$0"); dollar_3.redraw();
+			retcomp40(); 
+		elseif (stick.y()<seq10[10]) then red10_10_10.set_color(0,0,0);
+		end;
+		dollar_10.set_caption("$10"); dollar_10.redraw();
+		codes10.present();
+	end;
+end;
