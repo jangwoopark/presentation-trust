@@ -1,0 +1,44 @@
+#mouse stick = response_manager.get_mouse( 1 ); 
+#joystick stick = response_manager.get_joystick( 1 ); 
+#stick.set_min_max( 1, -1, 1 );
+#stick.set_min_max( 2, -264, 220 );
+#stick.set_saturation( 1, 0.999 );
+#stick.set_saturation( 2, 0.999 );
+#stick.set_dead_zone( 1, 0.001 ); 
+#stick.set_dead_zone( 2, 0.001 );
+
+loop until	false
+begin 
+	array <int> seq10[10] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+	array <string> num[10] = {"$1", "$2", "$3","$4","$5","$6","$7","$8","$9","$10"};
+	array <string> mun[10] = {"$9", "$8", "$7","$6","$5","$4","$3","$2","$1","$0"};
+#	stick.poll();
+#	cursor10.set_part_x( 1, stick.x() ); 
+#	cursor10.set_part_y( 1, stick.y() );
+	int button = response_manager.total_response_count(1)-response_manager.total_response_count(2);
+		if (button==0) then zero.set_color(0,0,0); 
+			dollar_2.set_caption("_"); dollar_2.redraw(); 
+			dollar_3.set_caption("_"); dollar_3.redraw();
+			coding.set_event_code("_"); 
+		end;
+		if (button>0) 
+		then zero.set_color(0,255,0); 
+			dollar_2.set_caption("$0"); dollar_2.redraw(); 
+			dollar_3.set_caption("$10"); dollar_3.redraw();
+			coding.set_event_code("$0"); 
+		elseif (button<0) then zero.set_color(0,0,0); 
+		end;
+		loop int t=1 until t>10 begin
+			if (button>seq10[t]) 
+			then rex[t].set_color(255,0,0); 
+			dollar_2.set_caption(num[t]); dollar_2.redraw(); 
+			dollar_3.set_caption(mun[t]); dollar_3.redraw();
+			coding.set_event_code(num[t]);
+			elseif (button<seq10[t]) 
+			then rex[t].set_color(0,0,0);
+			end;
+			t = t + 1;
+		end;
+		dollar.set_caption("$10"); dollar.redraw();
+		codes.present();
+end;
